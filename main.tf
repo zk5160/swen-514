@@ -1,7 +1,7 @@
 # Add state to s3 bucket
 terraform {
   backend "s3" {
-    bucket  = "zk5160-wordpress-tfstate"   # your bucket's exact name
+    bucket  = "zk5160-wordpress-tfstate"  
     key     = "wordpress/terraform.tfstate"
     region  = "us-east-1"
     encrypt = true
