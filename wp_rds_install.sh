@@ -29,3 +29,7 @@ chmod -R 755 /var/www/html
 cp wp-config-sample.php wp-config.php
 
 # TODO: Add database configuration using the 4 variables passed in from the main.tf file
+sed -i "s|'database_name_here'|'${db_name}'|"  wp-config.php
+sed -i "s|'username_here'|'${db_username}'|"   wp-config.php
+sed -i "s|'password_here'|'${db_password}'|"   wp-config.php
+sed -i "s|'localhost'|'${db_host}'|"           wp-config.php
