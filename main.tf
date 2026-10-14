@@ -1,3 +1,13 @@
+# Add state to s3 bucket
+terraform {
+  backend "s3" {
+    bucket  = "zk5160-wordpress-tfstate"   # your bucket's exact name
+    key     = "wordpress/terraform.tfstate"
+    region  = "us-east-1"
+    encrypt = true
+  }
+}
+
 # Provider Configuration
 # Specifies the AWS provider and region for Terraform to manage resources in.
 provider "aws" {
