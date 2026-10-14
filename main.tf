@@ -8,15 +8,6 @@ locals {
   aws_key = "zk5160-key-pair"
 }
 
-resource "aws_instance" "my_server" {
-  ami = data.aws_ami.amazonlinux.id
-  instance_type = var.instance_type
-  key_name = "${local.aws_key}"
-  tags = {
-    Name = "my ec2"
-  }
-}
-
 # VPC and Networking Resources
 # Create a VPC, subnets, and related networking infrastructure for WordPress.
 
